@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    font-size: 220%;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #8C8C8D;
+    margin: 2% 0 2.5% 5%;
+    position: relative;
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    width: 94.5%;
+    height: 8%;
+    background-color: #B3B3B3;
+    bottom: -8px;
+}
+
+.top-content{
+    background-color: #F3F3F3;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /*border-radius: 5px;*/
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+h3{
+    height: 100%;
+    background-color: #B3B3B3;
+    line-height: 60px;
+    padding: 0 50px;
+    color: #FFF;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #757576;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover{
+    color: red;
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+}
+
+.picture{
+    position: relative;
+    height: 230;
+    border-radius: 10px;
+}
+
+.picture img{
+    width: 100%;
+    height: 85%;
+    border-radius: 10px 10px 0 0;
+}
+
+#check1:checked ~ .container .photo-gallery .picture{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check2:checked ~ .container .photo-gallery .ciceksi{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check2:checked ~ .container .photo-gallery .oryantal,
+#check2:checked ~ .container .photo-gallery .odunsu,
+#check2:checked ~ .container .photo-gallery .ferah{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#check3:checked ~ .container .photo-gallery .oryantal{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check3:checked ~ .container .photo-gallery .ciceksi,
+#check3:checked ~ .container .photo-gallery .odunsu,
+#check3:checked ~ .container .photo-gallery .ferah{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#check4:checked ~ .container .photo-gallery .odunsu{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check4:checked ~ .container .photo-gallery .ciceksi,
+#check4:checked ~ .container .photo-gallery .oryantal,
+#check4:checked ~ .container .photo-gallery .ferah{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#check5:checked ~ .container .photo-gallery .ferah{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check5:checked ~ .container .photo-gallery .ciceksi,
+#check5:checked ~ .container .photo-gallery .oryantal,
+#check5:checked ~ .container .photo-gallery .odunsu{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+.info{
+    background-color: #F3F3F3;
+    color: #757576;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    height: 42px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -5px;
+    text-align: left;
+    padding-top: 14px;
+    padding-left: 10px;
+}
+
+.button{
+    width: 30px;
+    height: 30px;
+    border: 3px solid #B3B3B3;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
+    bottom: 1.5%;
+    color: #B3B3B3;   
+    display: inline-block;
+}
+
+.button:hover{
+    color: red;
+    border: 3px solid red;
+}
+
+/* PAYMENTS SAYFASI */
+
+.outside{
+    background-color: red;
+    width: 45%;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 3px 3px 6px lightgray;
+}
+
+.inside{
+    background-color: white;
+    width: 95%;
+    height: 580px;
+    margin: 10px auto 0 auto;
+    box-shadow: 3px 3px 6px lightgray;
+}
+
+
